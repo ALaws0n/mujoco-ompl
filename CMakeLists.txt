@@ -21,28 +21,28 @@ add_library(glfw3 SHARED IMPORTED)
 
 if(APPLE)
 	set_target_properties(mujoco-nogl PROPERTIES
-	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco200/bin/libmujoco200nogl.dylib"
-	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco200/include" )
+	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco210/bin/libmujoco210nogl.dylib"
+	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco210/include" )
 	
 	set_target_properties(mujoco PROPERTIES
-	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco200/bin/libmujoco200.dylib"
-	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco200/include" )
+	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco210/bin/libmujoco210.dylib"
+	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco210/include" )
 	
 	set_target_properties(glfw3 PROPERTIES
-	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco200/bin/libglfw.3.dylib"
-	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco200/include" )	
+	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco210/bin/libglfw.3.dylib"
+	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco210/include" )	
 elseif(UNIX)
 	set_target_properties(mujoco-nogl PROPERTIES
-	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco200/bin/libmujoco200nogl.so"
-	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco200/include" )
+	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco210/bin/libmujoco210nogl.so"
+	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco210/include" )
 
 	set_target_properties(mujoco PROPERTIES
-	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco200/bin/libmujoco200.so"
-	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco200/include" )
+	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco210/bin/libmujoco210.so"
+	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco210/include" )
 
 	set_target_properties(glfw3 PROPERTIES
-	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco200/bin/libglfw.so.3"
-	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco200/include" )
+	  IMPORTED_LOCATION "$ENV{HOME}/.mujoco/mujoco210/bin/libglfw.so.3"
+	  INTERFACE_INCLUDE_DIRECTORIES "$ENV{HOME}/.mujoco/mujoco210/include" )
 endif()
 
 include_directories(${OMPL_INCLUDE_DIRS}, ${Boost_INCLUDE_DIR})
